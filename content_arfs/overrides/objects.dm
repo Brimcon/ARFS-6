@@ -27,14 +27,3 @@
 	flipped = 0
 /obj/structure/table/fancyblack
 	flipped = 0
-
-// medkit
-/obj/item/weapon/storage/firstaid/regular
-	starts_with = list(
-		/obj/item/device/healthanalyzer, //ARFS EDIT
-		/obj/item/stack/medical/bruise_pack,
-		/obj/item/stack/medical/bruise_pack,
-		/obj/item/stack/medical/bruise_pack,
-		/obj/item/stack/medical/ointment,
-		/obj/item/stack/medical/ointment,
-		/obj/item/weapon/storage/pill_bottle/paracetamol )
