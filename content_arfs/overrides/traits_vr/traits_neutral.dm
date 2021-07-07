@@ -146,24 +146,49 @@
 	C.mob_size = !C.mob_size
 
 //Accents
-#define ACCENTS_LIST_ALL list(/datum/trait/neutral/autohiss_unathi,/datum/trait/neutral/autohiss_tajaran,/datum/trait/autohiss_vassilian,/datum/trait/neutral/accent_swedish,/datum/trait/neutral/accent_japenese)
+//the way this works, okay, if you're just replacing one letter those will go first; top to bottom no matter list placement.  If there are multiple instances of the same letter being changed the longest instance takes precendenced.
+//Players can have either autohiss or one accent.
+//1) compiles big list of replacements to look for
+//2) takes long replacements and puts them in separate list
+//3) replaces the list of long bois
+//4) replaces list of short ones
+//5) each list is done top to bottom
+//6) if you add a new accent add it to ACCENTS_LIST_ALL below with no spaces.  Defines are funky.
+//7
+//  ~Dictated via TK from Cactus
+// "" = list(""), ~Tk made this for anyone who wants to have a set copy/paste bit of code to add lots of accents in.
+
+#define ACCENTS_LIST_ALL list(/datum/trait/neutral/autohiss_unathi,/datum/trait/neutral/autohiss_tajaran,/datum/trait/autohiss_vassilian,/datum/trait/neutral/accent_swedish,/datum/trait/neutral/accent_japenese,/datum/trait/neutral/accent_irish,/datum/trait/neutral/accent_french,/datum/trait/neutral/accent_scottish)
 
 /datum/trait/neutral/accent_swedish
 	name = "Accent (Swedish)"
 	desc = "You have a noticeable Swedish accent. Uses the autohiss function, which must be enabled in-game with Toggle-Auto-Hiss. Excludes: Other accents/auto-hisses"
 	cost = 0
 	excludes = ACCENTS_LIST_ALL
+	custom_only = FALSE
 	var_changes = list(autohiss_basic_map = list(
 		"j" = list("y"),
 		"ch" = list("sh"),
 		"hu" = list("yu"),
 		"hoo" = list("yu")
+		),
+
+	autohiss_extra_map = list(
+		" your " = list(" din "),
+		" you " = list(" du "),
+		" you'll " = list(" du kommer "),
+		" you've " = list(" du har "),
+		" and " = list(" och "),
+		" or " = list(" eller "),
+		" but " = list(" men "), // haha butt men ~TK
+		" so " = list(" sa ") //Should be så, but Byond a shit ~TK
 		))
 
 /datum/trait/neutral/accent_japenese
 	name = "Accent (Japanese)"
 	desc = "You have a noticeable Japanese accent. Uses the autohiss function, which must be enabled in-game with Toggle-Auto-Hiss. Excludes: Other accents/auto-hisses"
 	cost = 0
+	custom_only = FALSE
 	var_changes = list(autohiss_basic_map = list(
 		"l" = list("r"),
 		"v" = list("b"),
@@ -180,5 +205,82 @@
 		))
 	excludes = ACCENTS_LIST_ALL
 
+
+/datum/trait/neutral/accent_irish
+	name = "Accent (Irish)"
+	desc = "You have a noticeable Irish accent. Uses the autohiss function, which must be enabled in-game with Toggle-Auto-Hiss. Excludes: Other accents/auto-hisses"
+	cost = 0
+	custom_only = FALSE
+	var_changes = list(autohiss_basic_map = list(
+		"ing" = list("eng"),
+		"i" = list("ei"),
+		"th" = list("d"),
+		"r" = list("er"),
+		"'l" = list("ll")
+		),
+
+	autohiss_extra_map = list(
+		" youer " = list(" do "),
+		" you " = list(" tú "),
+		" you've " = list(" tá tú "),
+		" and " = list(" agus "),
+		" or " = list("  nó "),
+		" but " = list(" ach "),
+		" so " = list(" mar sin ")
+		))
+	excludes = ACCENTS_LIST_ALL
+
+/datum/trait/neutral/accent_french
+	name = "Accent (French)"
+	desc = "You have a noticeable French accent. Uses the autohiss function, which must be enabled in-game with Toggle-Auto-Hiss. Excludes: Other accents/auto-hisses"
+	cost = 0
+	custom_only = FALSE
+	var_changes = list(autohiss_basic_map = list(
+		"th" = list("zh"),
+		"s" = list("z"),
+		"r" = list("rr"),
+		"h" = list("'"),
+		"i" = list("e", "ee", "i")
+		),
+
+	autohiss_extra_map = list(
+		" yourr " = list(" votre "),
+		" you " = list(" toi "),
+		" you'll " = list(" tu vas "),
+		" you've " = list(" vous avez "),
+		" and " = list(" et "),
+		" orr " = list(" ou "), //Or -> Orr -> Ou
+		" but " = list(" mais "),
+		" zo " = list(" donc ") //So -> Zo -> Donc
+		))
+	excludes = ACCENTS_LIST_ALL
+
+
+/datum/trait/neutral/accent_scottish
+	name = "Accent (Scottish)"
+	desc = "You have a noticeable Scottish accent. Uses the autohiss function, which must be enabled in-game with Toggle-Auto-Hiss. Excludes: Other accents/auto-hisses"
+	cost = 0
+	custom_only = FALSE
+	var_changes = list(autohiss_basic_map = list(
+		"h" = list("'"),
+		"g" = list("'"),
+		" of " = list(" o' ")
+		),
+
+	autohiss_extra_map = list(
+		" your " = list(" yer "),
+		" you " = list(" ye "),
+		" you'll " = list(" ye'll "),
+		" you've " = list(" ye've "),
+		" and " = list(" agus "),
+		" or " = list("  no "),
+		" but " = list(" ach "),
+		" so " = list(" mar sin "),
+		" of " = list(" o' ")
+		))
+	excludes = ACCENTS_LIST_ALL
+
+
 //accents go above this ^
 #undef ACCENTS_LIST_ALL
+

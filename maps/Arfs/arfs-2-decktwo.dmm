@@ -545,6 +545,22 @@
 	},
 /turf/simulated/floor/wood,
 /area/bridge)
+"abo" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/mob/living/simple_mob/animal/passive/fox/renault,
+/turf/simulated/floor/wood,
+/area/crew_quarters/captain)
+"abp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/mob/living/simple_mob/animal/passive/dog/corgi/Ian,
+/turf/simulated/floor/wood,
+/area/crew_quarters/heads/hop)
 "abq" = (
 /obj/structure/grille,
 /turf/simulated/floor/plating,
@@ -1173,14 +1189,12 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "acC" = (
-/mob/living/simple_mob/animal/passive/fox/renault,
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 4;
+	tag = "icon-intact (EAST)"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/wood,
-/area/crew_quarters/captain)
+/turf/simulated/floor/plating,
+/area/space)
 "acD" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -1284,6 +1298,12 @@
 "acO" = (
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
+"acP" = (
+/obj/machinery/atmospherics/pipe/simple/visible/blue{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "acQ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -1425,6 +1445,13 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
+"ade" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/machinery/atmospherics/pipe/simple/visible/blue{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "adf" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1931,6 +1958,10 @@
 /obj/item/weapon/gun/magnetic/railgun/heater,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
+"aee" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/turf/simulated/floor/plating,
+/area/space)
 "aef" = (
 /obj/machinery/deployable/barrier,
 /obj/machinery/light{
@@ -2285,6 +2316,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
+"aez" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/plating,
+/area/space)
 "aeA" = (
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/fore{
@@ -5014,13 +5052,6 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/turf/simulated/floor/wood,
-/area/crew_quarters/heads/hop)
-"akH" = (
-/mob/living/simple_mob/animal/passive/dog/corgi/Ian,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "akI" = (
@@ -16868,6 +16899,7 @@
 /area/crew_quarters/bar)
 "aHW" = (
 /obj/machinery/ai_status_display,
+/obj/structure/sign/poster,
 /turf/simulated/wall,
 /area/crew_quarters/kitchen)
 "aHX" = (
@@ -17610,7 +17642,9 @@
 /area/maintenance/medbay)
 "aJO" = (
 /turf/simulated/wall,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "aJP" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -17903,7 +17937,9 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "aKq" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -18304,9 +18340,16 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "aLe" = (
+/obj/structure/bed/chair/wood{
+	dir = 4;
+	tag = "icon-wooden_chair (EAST)"
+	},
+/obj/effect/landmark/start{
+	name = "Assistant"
+	},
 /obj/structure/sign/poster,
-/turf/simulated/wall,
-/area/crew_quarters/kitchen)
+/turf/simulated/floor/wood,
+/area/crew_quarters/cafeteria)
 "aLf" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -19532,10 +19575,8 @@
 	pixel_y = -26
 	},
 /obj/effect/floor_decal/borderfloorblack,
-/obj/structure/device/piano{
-	density = 0;
-	dir = 4;
-	name = "piano"
+/obj/structure/musician/piano{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/bar)
@@ -19933,10 +19974,6 @@
 "aOb" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
-/area/crew_quarters/cafeteria)
-"aOc" = (
-/obj/structure/sign/poster,
-/turf/simulated/wall,
 /area/crew_quarters/cafeteria)
 "aOd" = (
 /obj/machinery/door/window/southleft{
@@ -24071,6 +24108,7 @@
 	c_tag = "CIV - Main Loop 7";
 	dir = 1
 	},
+/obj/structure/sign/poster,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_two)
 "aVi" = (
@@ -25215,7 +25253,9 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "aXn" = (
 /turf/simulated/floor/tiled/dark,
 /area/storage/tech)
@@ -27957,6 +27997,15 @@
 /obj/machinery/alarm{
 	pixel_y = 25
 	},
+/obj/structure/table/standard,
+/obj/item/stack/material/phoron{
+	amount = 50;
+	pixel_x = -1;
+	pixel_y = 7
+	},
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
 "bcY" = (
@@ -27967,6 +28016,8 @@
 	layer = 3.3;
 	pixel_y = 26
 	},
+/obj/structure/table/standard,
+/obj/machinery/reagentgrinder,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
 "bcZ" = (
@@ -28584,10 +28635,8 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
-/obj/machinery/chemical_dispenser{
-	density = 1
-	},
 /obj/structure/table/standard,
+/obj/machinery/chemical_dispenser/full,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
 "beo" = (
@@ -30897,12 +30946,16 @@
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "bjv" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "bjw" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 9;
@@ -30914,7 +30967,9 @@
 	tag = "icon-corner_white (SOUTHWEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "bjx" = (
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
@@ -40976,7 +41031,9 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "clD" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -41640,7 +41697,9 @@
 	tag = "icon-corner_white (NORTHEAST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "diZ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -42216,7 +42275,9 @@
 "esw" = (
 /obj/structure/table/bench/padded,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "etm" = (
 /obj/machinery/portable_atmospherics/powered/pump,
 /obj/machinery/atmospherics/portables_connector,
@@ -42811,7 +42872,9 @@
 	tag = "icon-corner_white (NORTHWEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "fby" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/external{
@@ -43218,7 +43281,7 @@
 	dir = 8
 	},
 /obj/effect/effect/steam,
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -43499,7 +43562,9 @@
 	tag = "icon-corner_white (NORTHWEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "fZo" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -44425,7 +44490,9 @@
 	},
 /obj/machinery/vending/snack,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "hiL" = (
 /obj/machinery/iv_drip,
 /obj/machinery/alarm{
@@ -44886,13 +44953,10 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "hOb" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -45019,7 +45083,9 @@
 	},
 /obj/machinery/vending/coffee,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "hXq" = (
 /obj/machinery/shower{
 	dir = 4;
@@ -45460,7 +45526,9 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "iDS" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4;
@@ -45479,7 +45547,9 @@
 	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "iEH" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance/common,
@@ -46731,7 +46801,7 @@
 	dir = 8
 	},
 /obj/effect/effect/steam,
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -47210,7 +47280,9 @@
 /obj/effect/floor_decal/carpet,
 /obj/structure/table/woodentable,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "lbm" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
@@ -47330,7 +47402,9 @@
 	},
 /obj/structure/closet/walllocker/emerglocker/south,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "lkx" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -47435,7 +47509,9 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "lsu" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -47485,7 +47561,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "lym" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -47708,16 +47786,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
-"lGf" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/machinery/atmospherics/pipe/simple/visible/blue{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/engineering/engine_room)
 "lGl" = (
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "lHn" = (
 /obj/machinery/computer/rcon{
 	dir = 8
@@ -48541,7 +48614,7 @@
 "mNM" = (
 /obj/structure/railing,
 /obj/effect/effect/steam,
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -49218,7 +49291,9 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "nOR" = (
 /obj/machinery/vending/blue_lotus,
 /obj/effect/floor_decal/corner/blue{
@@ -49681,7 +49756,9 @@
 	tag = "icon-corner_white (SOUTHWEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "ovU" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/storage/toolbox/electrical,
@@ -49713,7 +49790,9 @@
 	tag = "icon-corner_white (SOUTHWEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "oxG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 4
@@ -49947,7 +50026,9 @@
 	name = "Residential Dock Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "oLl" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/weapon/storage/toolbox/mechanical{
@@ -50052,7 +50133,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -50801,7 +50882,9 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "pXk" = (
 /obj/machinery/computer/station_alert{
 	dir = 8
@@ -50952,7 +51035,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "qgW" = (
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_emt_bay)
@@ -50989,7 +51074,7 @@
 	dir = 1
 	},
 /obj/effect/effect/steam,
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -51003,7 +51088,9 @@
 	},
 /obj/structure/table/woodentable,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "qjL" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -51408,7 +51495,9 @@
 	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "qOd" = (
 /obj/machinery/power/apc{
 	cell_type = /obj/item/weapon/cell/super;
@@ -51591,7 +51680,9 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "qXI" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall,
@@ -51992,13 +52083,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
-"rwi" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/plating,
-/area/engineering/engine_room)
 "rwB" = (
 /obj/machinery/atmospherics/binary/pump{
 	name = "Cold Loop Drain"
@@ -52391,7 +52475,9 @@
 "rOB" = (
 /obj/machinery/computer/shuttle_control/residential_shuttle,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "rPw" = (
 /turf/simulated/wall/r_lead,
 /area/engineering/gravity)
@@ -52577,7 +52663,9 @@
 	tag = "icon-carpet_edges (NORTHEAST)"
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "sbl" = (
 /obj/machinery/light{
 	dir = 8
@@ -52643,10 +52731,6 @@
 "sen" = (
 /turf/simulated/wall,
 /area/engineering/break_room)
-"sgv" = (
-/obj/structure/sign/poster,
-/turf/simulated/wall,
-/area/maintenance/central)
 "sgO" = (
 /obj/structure/curtain/open/privacy,
 /obj/effect/floor_decal/corner/paleblue{
@@ -52711,7 +52795,9 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "sjR" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -52910,14 +52996,18 @@
 	tag = "icon-corner_white (NORTHWEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "swB" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 8;
 	tag = "icon-corner_white (WEST)"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "sxz" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 5
@@ -53099,7 +53189,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -53137,7 +53227,9 @@
 /area/engineering/engine_room)
 "sMU" = (
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "sNz" = (
 /obj/machinery/light,
 /obj/machinery/newscaster{
@@ -53207,7 +53299,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -54112,7 +54204,9 @@
 	},
 /obj/machinery/disposal,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "uev" = (
 /obj/structure/morgue{
 	dir = 8
@@ -54392,7 +54486,9 @@
 	},
 /obj/machinery/computer/timeclock/premade/west,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "uwk" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 9
@@ -54466,7 +54562,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "uBA" = (
 /obj/structure/sign/warning/radioactive,
 /turf/simulated/wall/r_wall,
@@ -54859,7 +54957,9 @@
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "uWy" = (
 /obj/machinery/atmospherics/binary/pump,
 /turf/simulated/floor/tiled/dark,
@@ -55243,7 +55343,9 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "vGa" = (
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -55268,7 +55370,9 @@
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "vJU" = (
 /obj/structure/bed/padded,
 /obj/machinery/light{
@@ -55306,7 +55410,9 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "vNa" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -55788,7 +55894,7 @@
 	dir = 8
 	},
 /obj/effect/effect/steam,
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/visitor_lodging{
 	name = "\improper Fishing Area"
 	})
@@ -56351,7 +56457,9 @@
 "xtr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "xva" = (
 /obj/structure/cable/yellow{
 	d2 = 2;
@@ -56622,7 +56730,9 @@
 	dir = 1
 	},
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "xKq" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/warning{
@@ -56715,7 +56825,9 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "xQl" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor/plating,
@@ -56854,7 +56966,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet,
-/area/hallway/station/residentialdock)
+/area/hallway/station/residentialdock{
+	requires_power = 0
+	})
 "yeI" = (
 /obj/machinery/vending/coffee,
 /obj/effect/floor_decal/corner/yellow/border,
@@ -90459,7 +90573,7 @@ aba
 abN
 acd
 aco
-acC
+abo
 adt
 adt
 adt
@@ -90740,7 +90854,7 @@ aiJ
 uAV
 ajB
 akb
-akH
+abp
 alu
 ama
 amE
@@ -91324,7 +91438,7 @@ aOr
 aUj
 aQi
 aVh
-sgv
+agx
 aVQ
 aWt
 aWL
@@ -92176,8 +92290,8 @@ vZd
 kst
 qrK
 hTy
-qwu
-ygb
+acC
+acP
 hsn
 rsW
 dCV
@@ -92434,8 +92548,8 @@ fZW
 gto
 mVw
 iuc
-lGf
-oZz
+ade
+aee
 oZz
 uwk
 nbV
@@ -92693,7 +92807,7 @@ nkS
 qwu
 qEy
 qMM
-rwi
+aez
 wMj
 nbV
 vZd
@@ -92950,8 +93064,8 @@ xUs
 qwu
 qEy
 rwB
-rwi
-wMj
+aez
+oZp
 oQk
 vZd
 fQF
@@ -95413,7 +95527,7 @@ uQf
 aFw
 aFw
 aHW
-aLe
+aFw
 bRC
 bwm
 aFw
@@ -95679,8 +95793,8 @@ aLd
 tqR
 koY
 aMH
-aNo
-aOc
+aLe
+aKP
 aPr
 aPp
 aQj
